@@ -1,10 +1,10 @@
 <script setup>
 import { BApp } from 'bootstrap-vue-next';
-import Banner from './components/banner/Banner.vue';
-import AppNavbar from './components/navbar/AppNavbar.vue';
-import ProductCarousel from './components/products-carousel/ProductCarousel.vue';
+import AppNavbar from './components/common/navbar/AppNavbar.vue';
+import Banner from './components/home/banner/Banner.vue';
+import ProductCarousel from './components/home/products-carousel/ProductCarousel.vue';
+import InformacionGeneral from './components/home/info-general/InformacionGeneral.vue';
 import productsCarouselItems from './data/products.js';
-import InformacionGeneral from './components/info-general/InformacionGeneral.vue';
 </script>
 
 <template>

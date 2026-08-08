@@ -1,5 +1,5 @@
 <script setup>
-import { informacionGeneral } from '../../data/informacionGeneral.js';
+import { informacionGeneral } from '../../../data/informacionGeneral.js';
 </script>
 
 <template>

@@ -1,6 +1,6 @@
 <script setup>
     import { computed } from 'vue';
-    import { isValidImageConfig } from '../../composables/useImage.js';
+    import { isValidImageConfig } from '../../../composables/useImage.js';
 
     const props = defineProps({
         image: {

@@ -1,7 +1,7 @@
 <script setup>
     import NavbarTop from './NavbarTop.vue';
     import NavbarMenu from './NavbarMenu.vue';
-    import { navigationItems, socialLinks } from '../../data/navigation.js';
+    import { navigationItems, socialLinks } from '../../../data/navigation.js';
 </script>
 
 <template>

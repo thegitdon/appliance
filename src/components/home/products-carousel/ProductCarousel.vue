@@ -1,8 +1,8 @@
 <script setup>
 import { computed, ref, watch } from 'vue'
-import { BCarousel, BCarouselSlide, BCol, BContainer, BRow } from 'bootstrap-vue-next'
+import { BCarousel, BCarouselSlide, BCol, BRow } from 'bootstrap-vue-next'
 import ProductCard from './ProductCard.vue'
-import { useCardsPerView } from '../../composables/useCardsPerView.js'
+import { useCardsPerView } from '../../../composables/useCardsPerView.js'
 
 const props = defineProps({
     products: { type: Array, required: true },
