@@ -4,6 +4,7 @@ import Banner from './components/banner/Banner.vue';
 import AppNavbar from './components/navbar/AppNavbar.vue';
 import ProductCarousel from './components/products-carousel/ProductCarousel.vue';
 import productsCarouselItems from './data/products.js';
+import InformacionGeneral from './components/info-general/InformacionGeneral.vue';
 </script>
 
 <template>
@@ -14,6 +15,8 @@ import productsCarouselItems from './data/products.js';
             <h1>Hola mundo</h1>
 
             <ProductCarousel :products="productsCarouselItems" />
+
+            <InformacionGeneral />
             <!-- tu contenido -->
         </main>
     </BApp>
