@@ -1,32 +1,33 @@
-<script setup>
-import BaseButton from '../buttons/BaseButton.vue';
+<script setup lang="ts">
+import type { SocialButtonType } from '@/types/social-button.type.ts';
 import BrandLogo from './BrandLogo.vue';
 import SocialLinks from './SocialLinks.vue';
-import IconCalendar from './icons/IconCalendar.vue';
-import IconMail from './icons/IconMail.vue';
+import BaseButton from '../buttons/BaseButton.vue';
 
-defineProps({
-    socialLinks: { type: Array, required: true },
-});
+defineProps<{
+    socialLinks: SocialButtonType[],
+}>();
+
+const redirectTo = 'https://www.facebook.com/';
 </script>
 
 <template>
     <div class="navbar-top">
-        <BrandLogo />
+        <BrandLogo :to="redirectTo" />
 
         <div class="navbar-top__actions">
             <SocialLinks :links="socialLinks" />
 
             <BaseButton variant="outline" href="#contacto">
                 <template #icon>
-                    <IconMail />
+                    <i class="fa-regular fa-envelope"></i>
                 </template>
                 Contacto
             </BaseButton>
 
             <BaseButton variant="primary" href="#agendar">
                 <template #icon>
-                    <IconCalendar />
+                    <i class="fa-regular fa-calendar"></i>
                 </template>
                 Agendar cita
             </BaseButton>

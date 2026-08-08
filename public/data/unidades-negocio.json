@@ -1,0 +1,32 @@
+[
+    {
+        "id": "consulta-externa",
+        "titulo": "Consulta Externa",
+        "icono": "bi-clipboard2-pulse",
+        "href": "#"
+    },
+    {
+        "id": "sustancias-psicoactivas",
+        "titulo": "Cuidado Básico Consumo Sustancias Psicoactivas",
+        "icono": "bi-capsule-pill",
+        "href": "#"
+    },
+    {
+        "id": "hospital-dia",
+        "titulo": "Internación Parcial \"Hospital Día\"",
+        "icono": "bi-brush",
+        "href": "#"
+    },
+    {
+        "id": "salud-mental",
+        "titulo": "Internación Salud Mental",
+        "icono": "bi-hospital",
+        "href": "#"
+    },
+    {
+        "id": "telemedicina",
+        "titulo": "Telemedicina",
+        "icono": "bi-display",
+        "href": "#"
+    }
+]

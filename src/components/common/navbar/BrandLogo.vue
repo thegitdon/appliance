@@ -1,7 +1,7 @@
-<script setup>
-    defineProps({
-        to: { type: String, default: '/' },
-    })
+<script setup lang="ts">
+defineProps<{
+    to: string,
+}>();
 </script>
 
 <template>
@@ -18,39 +18,39 @@
 </template>
 
 <style scoped>
-    .brand {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.75rem;
-        color: inherit;
-        text-decoration: none;
-    }
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: inherit;
+    text-decoration: none;
+}
 
-    .brand__badge {
-        position: relative;
-        width: 68px;
-        height: 28px;
-    }
+.brand__badge {
+    position: relative;
+    width: 68px;
+    height: 28px;
+}
 
-    .brand__badge svg {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-    }
+.brand__badge svg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
 
-    .brand__name {
-        position: absolute;
-        inset: 0;
-        display: grid;
-        place-items: center;
-        font-style: italic;
-        font-weight: 800;
-        font-size: 0.8rem;
-    }
+.brand__name {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 0.8rem;
+}
 
-    .brand__title {
-        font-weight: 700;
-        font-size: 1rem;
-    }
+.brand__title {
+    font-weight: 700;
+    font-size: 1rem;
+}
 </style>

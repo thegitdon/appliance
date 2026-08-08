@@ -1,7 +1,9 @@
-<script setup>
-defineProps({
-  items: { type: Array, required: true },
-});
+<script setup lang="ts">
+import type { NavbarMenuItemType } from '@/types/navbar-menu-item.type';
+
+defineProps<{
+  items: NavbarMenuItemType[],
+}>();
 </script>
 
 <template>

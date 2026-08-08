@@ -1,59 +1,49 @@
-<script setup>
-    import { computed } from 'vue';
-    import { isValidImageConfig } from '../../../composables/useImage.js';
+<script setup lang="ts">
+import { computed } from 'vue';
+import type { ImageConfig } from '@/types/responsive-image.type.js';
+import { ConstantsUtil } from '@/utils/constants.util.js';
 
-    const props = defineProps({
-        image: {
-            type: Object,
-            required: true,
-            validator: isValidImageConfig,
-        },
-        loading: {
-            type: String,
-            default: 'lazy',
-            validator: (value) => ['lazy', 'eager'].includes(value),
-        },
-        // Puntos de corte configurables
-        breakpoints: {
-            type: Object,
-            default: () => ({ medium: '768px', large: '1200px' }),
-        },
-    });
+const props = defineProps<{
+    image: ImageConfig,
+    loading: 'lazy' | 'eager',
+}>();
 
-    // Orden importa: el navegador toma el primer <source> que cumpla el media query
-    const sources = computed(() => {
-        if (!props.image.multiples) return [];
-        const { large, medium } = props.image.images;
+const breakpoints = ConstantsUtil.BREAKPOINTS_CAROUSEL;
 
-        return [
-            { media: `(min-width: ${props.breakpoints.large})`, srcset: large },
-            { media: `(min-width: ${props.breakpoints.medium})`, srcset: medium },
-        ];
-    });
+const sources = computed(() => {
+    if (!props.image.multiples) return [];
 
-    const fallbackSrc = computed(() =>
-        props.image.multiples ? props.image.images.small : props.image.image,
-    );
+    const { large, medium } = props.image.images;
+
+    return [
+        { media: `(min-width: ${breakpoints.large})`, srcset: large },
+        { media: `(min-width: ${breakpoints.medium})`, srcset: medium },
+    ];
+});
+
+const fallbackSrc = computed(() =>
+    props.image.multiples ? props.image.images.small : props.image.image,
+);
 </script>
 
 <template>
     <picture class="responsive-picture">
         <source v-for="source in sources" :key="source.media" :media="source.media" :srcset="source.srcset" />
         <img :src="fallbackSrc" :alt="image.alt ?? ''" :title="image.title ?? undefined" :loading="loading"
-            decoding="async" />
+            decoding="async" class="img-fluid"/>
     </picture>
 </template>
 
 <style scoped>
-    .responsive-picture {
-        display: block;
-        width: 100%;
-    }
+.responsive-picture {
+    display: block;
+    width: 500px;
+}
 
-    .responsive-picture img {
-        display: block;
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
+.responsive-picture img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
 </style>

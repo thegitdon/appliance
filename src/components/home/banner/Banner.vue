@@ -1,6 +1,6 @@
-<script setup>
+<script setup lang="ts">
 import ResponsivePicture from '@/components/common/pictures/ResponsivePicture.vue';
-import { useImage } from '../../../composables/useImage.js';
+import { useImage } from '@/services/use-image.service';
 
 const props = defineProps({
     imageKey: { type: String, default: 'banner_servicios' },
@@ -19,5 +19,7 @@ const { image } = useImage(() => props.imageKey);
 .banner {
     width: 100%;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 </style>

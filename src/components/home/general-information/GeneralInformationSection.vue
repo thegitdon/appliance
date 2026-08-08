@@ -1,21 +1,47 @@
-<script setup>
-import { informacionGeneral } from '../../../data/informacionGeneral.js';
+<script setup lang="ts">
+import { consume } from '@/services/consumer.service';
+import type { SectionContentType } from '@/types/section-content.type';
+import { UrlConstantsUtil } from '@/utils/url-constants.util';
+import { onMounted, ref } from 'vue';
+
+const title = "Nuestros servicios";
+const sections = ref<SectionContentType[]>([]);
+const cargando = ref(true);
+const error = ref<string | null>(null);
+
+onMounted(async () => {
+    try {
+        sections.value = await consume<SectionContentType[]>(UrlConstantsUtil.INFORMACION_GENERAL_URL);
+    } catch (e) {
+        error.value = e instanceof Error ? e.message : 'Error inesperado';
+    } finally {
+        cargando.value = false;
+    }
+});
 </script>
 
 <template>
     <section class="py-4" aria-label="Información general">
         <div class="container">
-            <h2 class="titulo-seccion">Nuestros servicios</h2>
+            <h2 class="titulo-seccion">{{ title }}</h2>
 
-            <article v-for="(servicio, index) in informacionGeneral" :key="servicio.id" class="servicio"
+            <div v-if="cargando" class="text-center py-5" role="status">
+                <div class="spinner-border text-primary" aria-hidden="true"></div>
+            </div>
+
+            <div v-else-if="error" class="alert alert-danger mb-0" role="alert">
+                {{ error }}
+            </div>
+
+            <article v-for="(section, index) in sections" :key="section.id" class="servicio"
                 :class="{ 'servicio--invertido': index % 2 === 1 }">
                 <div class="servicio__icono">
-                    <component :is="servicio.icono" class="icono" />
+                    <component :is="section.icono" class="icono" />
                 </div>
 
                 <div class="servicio__contenido">
-                    <h3 class="servicio__titulo">{{ servicio.titulo }}</h3>
-                    <p v-for="(parrafo, i) in servicio.parrafos" :key="i" class="servicio__parrafo">
+                    <h3 class="servicio__titulo">{{ section.titulo }}</h3>
+                    <p v-for="(parrafo, i) in section.parrafos" :key="i" class="servicio__parrafo">
                         {{ parrafo }}
                     </p>
                 </div>

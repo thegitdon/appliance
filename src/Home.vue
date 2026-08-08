@@ -1,10 +1,11 @@
-<script setup>
+<script setup lang="ts">
 import { BApp } from 'bootstrap-vue-next';
-import AppNavbar from './components/common/navbar/AppNavbar.vue';
+import AppNavbar from '@/components/common/navbar/AppNavbar.vue';
 import Banner from './components/home/banner/Banner.vue';
 import ProductCarousel from './components/home/products-carousel/ProductCarousel.vue';
-import InformacionGeneral from './components/home/info-general/InformacionGeneral.vue';
+import InformacionGeneral from '@/components/home/general-information/GeneralInformationSection.vue';
 import productsCarouselItems from './data/products.js';
+import SpecialistSection from '@/components/home/specialist/SpecialistSection.vue';
 </script>
 
 <template>
@@ -12,12 +13,13 @@ import productsCarouselItems from './data/products.js';
         <AppNavbar />
         <main>
             <Banner />
-            <h1>Hola mundo</h1>
 
-            <ProductCarousel :products="productsCarouselItems" />
-
+            <!-- <ProductCarousel :products="productsCarouselItems" />-->
+            <hr>
+            
             <InformacionGeneral />
-            <!-- tu contenido -->
+
+            <SpecialistSection />
         </main>
     </BApp>
 </template>
