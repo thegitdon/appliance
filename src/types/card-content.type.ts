@@ -1,7 +1,7 @@
 export interface CardContentType {
     id: string;
     titulo: string;
-    /** Clase de Bootstrap Icons, p. ej. "bi-hospital" */
+    descripcion?: string;
     icono: string;
     href: string;
 }

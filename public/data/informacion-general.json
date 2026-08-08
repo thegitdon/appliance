@@ -5,7 +5,10 @@
         "parrafos": [
             "En Consulta Externa ofrecemos atención ambulatoria especializada en psiquiatría, psiquiatría infantil, psicología, neuropsicología, terapia ocupacional y trabajo social. Nuestros servicios son integrales y están articulados entre sí, creando un espacio multidisciplinario donde cada profesional trabaja en conjunto para ofrecerte las mejores soluciones y un enfoque integral para tu bienestar."
         ],
-        "icono": "ba-jass"
+        "icono": {
+            "class": "fa-solid fa-reply",
+            "styles": "font-size: 40px;"
+        }
     },
     {
         "id": "cuidado-basico",
@@ -14,6 +17,8 @@
             "El Cuidado Básico para el Consumo de Sustancias Psicoactivas se centra en la prevención y el manejo del consumo de sustancias psicoactivas, enfocándose en la identificación y el manejo de factores de riesgo y la promoción de estilos de vida saludables.",
             "Este cuidado incluye la identificación y diagnóstico de factores de riesgo, la promoción de estilos de vida saludables y la participación en actividades comunitarias."
         ],
-        "icono": "ba-jass"
+        "icono": {
+            "class": "fa-solid fa-reply"
+        }
     }
 ]

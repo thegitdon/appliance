@@ -10,6 +10,11 @@ defineProps<{
         <div class="card-body d-flex flex-column align-items-center text-center gap-3 py-4 px-3">
             <i class="bi fs-1" :class="content.icono" aria-hidden="true"></i>
             <h3 class="card-title fs-6 fw-normal mb-0">{{ content.titulo }}</h3>
+
+            <p v-if="content.descripcion">
+                {{ content.descripcion }}
+            </p>
+
             <a :href="content.href"
                 class="small link-primary text-decoration-none d-inline-flex align-items-center gap-1"
                 :aria-label="`Ir al link de ${content.titulo}`">

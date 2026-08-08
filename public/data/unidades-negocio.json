@@ -2,30 +2,35 @@
     {
         "id": "consulta-externa",
         "titulo": "Consulta Externa",
-        "icono": "bi-clipboard2-pulse",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat perspiciatis sint aperiam beatae ex repudiandae! Culpa sint, repellendus consectetur suscipit vitae dolorem est consequuntur eaque debitis. Laudantium similique quas quae.",
+        "icono": "fa-solid fa-reply",
         "href": "#"
     },
     {
         "id": "sustancias-psicoactivas",
         "titulo": "Cuidado Básico Consumo Sustancias Psicoactivas",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat perspiciatis sint aperiam beatae ex repudiandae! Culpa sint, repellendus consectetur suscipit vitae dolorem est consequuntur eaque debitis. Laudantium similique quas quae.",
         "icono": "bi-capsule-pill",
         "href": "#"
     },
     {
         "id": "hospital-dia",
         "titulo": "Internación Parcial \"Hospital Día\"",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat perspiciatis sint aperiam beatae ex repudiandae! Culpa sint, repellendus consectetur suscipit vitae dolorem est consequuntur eaque debitis. Laudantium similique quas quae.",
         "icono": "bi-brush",
         "href": "#"
     },
     {
         "id": "salud-mental",
         "titulo": "Internación Salud Mental",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat perspiciatis sint aperiam beatae ex repudiandae! Culpa sint, repellendus consectetur suscipit vitae dolorem est consequuntur eaque debitis. Laudantium similique quas quae.",
         "icono": "bi-hospital",
         "href": "#"
     },
     {
         "id": "telemedicina",
         "titulo": "Telemedicina",
+        "descripcion": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat perspiciatis sint aperiam beatae ex repudiandae! Culpa sint, repellendus consectetur suscipit vitae dolorem est consequuntur eaque debitis. Laudantium similique quas quae.",
         "icono": "bi-display",
         "href": "#"
     }

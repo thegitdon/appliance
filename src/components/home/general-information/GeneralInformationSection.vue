@@ -36,7 +36,7 @@ onMounted(async () => {
             <article v-for="(section, index) in sections" :key="section.id" class="servicio"
                 :class="{ 'servicio--invertido': index % 2 === 1 }">
                 <div class="servicio__icono">
-                    <component :is="section.icono" class="icono" />
+                    <i :class="section.icono.class" :style="section.icono.styles"></i>
                 </div>
 
                 <div class="servicio__contenido">
