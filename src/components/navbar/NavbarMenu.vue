@@ -1,4 +1,6 @@
 <script setup>
+import { BDropdown, BDropdownItem } from 'bootstrap-vue-next';
+
 defineProps({
   items: { type: Array, required: true },
 });
@@ -7,9 +9,9 @@ defineProps({
 <template>
   <nav class="navbar-menu" aria-label="Menú de servicios">
     <ul class="navbar-menu__list">
-      <span v-for="item in items">
-        {{ item }}
-      </span>
+      <BDropdown v-for="item in items" text="Dropdown Button" class="me-2">
+        <BDropdownItem :href="item.to">{{ item.label }}</BDropdownItem>
+      </BDropdown>
     </ul>
   </nav>
 </template>
