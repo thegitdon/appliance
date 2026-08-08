@@ -1,7 +1,7 @@
 <script setup>
     import BrandLogo from './BrandLogo.vue';
     import SocialLinks from './SocialLinks.vue';
-    import BaseButton from './BaseButton.vue';
+    import BaseButton from '../common/BaseButton.vue';
     import IconCalendar from './icons/IconCalendar.vue';
     import IconMail from './icons/IconMail.vue';
 
