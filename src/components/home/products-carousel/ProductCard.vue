@@ -1,24 +1,24 @@
-<!-- src/components/products/ProductCard.vue -->
-<script setup>
-import { BCard, BCardBody, BCardFooter, BButton, BImg } from 'bootstrap-vue-next'
+<script setup lang="ts">
+import BaseButton from '@/components/common/buttons/BaseButton.vue';
+import type { ProductCardContentType } from '@/types/product-card-content.type';
 
-defineProps({
-    product: { type: Object, required: true },
-})
+defineProps<{
+    product: ProductCardContentType,
+}>();
 </script>
 
 <template>
-    <BCard no-body class="product-card">
+    <div class="product-card card" style="width: 18rem;">
         <div class="product-card__media">
-            <BImg :src="product.image" :alt="product.alt ?? product.title" loading="lazy" />
+            <img :src="product.image" :alt="product.alt ?? product.title" class="card-img-top" loading="lazy">
         </div>
 
-        <BCardBody class="text-center">
+        <div class="card-body">
             <h3 class="product-card__title">{{ product.title }}</h3>
-        </BCardBody>
+        </div>
 
-        <BCardFooter class="product-card__footer text-center">
-            <BButton :to="product.to" variant="link" class="product-card__cta">
+        <div class="card-footer text-center">
+            <BaseButton :href="product.to" variant="primary">
                 Conoce más
                 <span class="product-card__chevron" aria-hidden="true">
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -26,9 +26,9 @@ defineProps({
                         <polyline points="9 18 15 12 9 6" />
                     </svg>
                 </span>
-            </BButton>
-        </BCardFooter>
-    </BCard>
+            </BaseButton>
+        </div>
+    </div>
 </template>
 
 <style scoped>
