@@ -37,8 +37,8 @@ const icons = ConstantsUtil.SOCIAL_ICONS;
     height: 36px;
     border-radius: 50%;
     font-size: 20px;
-    /* controla el tamaño del icono (1em) */
     color: var(--color-text);
+    text-decoration: none;
 }
 
 .social__link:hover {

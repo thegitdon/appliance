@@ -1,4 +1,4 @@
-export interface ProductCardContentType {
+export interface CardContentWithImageType {
     id: string;
     title: string;
     image: string;

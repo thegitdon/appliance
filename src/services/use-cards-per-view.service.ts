@@ -4,12 +4,12 @@ import type { Ref } from 'vue'
 
 
 export function useCardsPerView(): { perView: Ref<number> } {
-    const perView = ref<number>(1)
+    const perView = ref<number>(1);
 
     const compute = (): void => {
         const width = window.innerWidth
 
-        if (width >= ConstantsUtil.BREAKPOINTS.xl) perView.value = 5
+        if (width >= ConstantsUtil.BREAKPOINTS.xl) perView.value = 4
         else if (width >= ConstantsUtil.BREAKPOINTS.lg) perView.value = 4
         else if (width >= ConstantsUtil.BREAKPOINTS.md) perView.value = 3
         else if (width >= ConstantsUtil.BREAKPOINTS.sm) perView.value = 2
@@ -17,13 +17,13 @@ export function useCardsPerView(): { perView: Ref<number> } {
     }
 
     onMounted(() => {
-        compute()
-        window.addEventListener('resize', compute, { passive: true })
-    })
+        compute();
+        window.addEventListener('resize', compute, { passive: true });
+    });
 
     onBeforeUnmount(() => {
-        window.removeEventListener('resize', compute)
-    })
+        window.removeEventListener('resize', compute);
+    });
 
-    return { perView }
+    return { perView };
 }

@@ -2,7 +2,8 @@
 import type { SocialButtonType } from '@/types/social-button.type.ts';
 import BrandLogo from './BrandLogo.vue';
 import SocialLinks from './SocialLinks.vue';
-import BaseButton from '../buttons/BaseButton.vue';
+import OutlineButton from '../buttons/OutlineButton.vue';
+import Button from '../buttons/Button.vue';
 
 defineProps<{
     socialLinks: SocialButtonType[],
@@ -18,19 +19,19 @@ const redirectTo = 'https://www.facebook.com/';
         <div class="navbar-top__actions">
             <SocialLinks :links="socialLinks" />
 
-            <BaseButton variant="outline" href="#contacto">
+            <OutlineButton href="#contacto">
                 <template #icon>
                     <i class="fa-regular fa-envelope"></i>
                 </template>
                 Contacto
-            </BaseButton>
+            </OutlineButton>
 
-            <BaseButton variant="primary" href="#agendar">
+            <Button href="#agendar">
                 <template #icon>
                     <i class="fa-regular fa-calendar"></i>
                 </template>
                 Agendar cita
-            </BaseButton>
+            </Button>
         </div>
     </div>
 </template>

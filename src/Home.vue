@@ -7,16 +7,18 @@ import SpecialistSection from '@/components/home/specialist/SpecialistSection.vu
 </script>
 
 <template>
-    <AppNavbar />
-    <main>
-        <Banner />
+    <div class="container">
+        <AppNavbar />
+        <main>
+            <Banner />
 
-        <ProductCarousel />
+            <ProductCarousel />
 
-        <InformacionGeneral />
+            <InformacionGeneral />
 
-        <SpecialistSection />
-    </main>
+            <SpecialistSection />
+        </main>
+    </div>
 </template>
 
 <style scoped>
