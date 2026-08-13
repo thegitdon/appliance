@@ -1,0 +1,22 @@
+[
+    {
+        "banner_servicios": {
+            "multiples": true,
+            "images": {
+                "small": "assets/images/ac7bbfc16bc3b27271dd5d47f09ac8c8.webp",
+                "medium": "assets/images/ac7bbfc16bc3b27271dd5d47f09ac8c8.webp",
+                "large": "assets/images/ac7bbfc16bc3b27271dd5d47f09ac8c8.webp"
+            },
+            "alt": "Técnico realizando mantenimiento de electrodomésticos Haceb",
+            "title": "Banner de servicios Haceb"
+        }
+    },
+    {
+        "logo_oportunidad_vida": {
+            "multiples": false,
+            "image": "assets/images/logo-oportunidad-de-vida.webp",
+            "alt": "Oportunidad de vida IPS",
+            "title": "Logo de oportunidad de vida IPS"
+        }
+    }
+]
