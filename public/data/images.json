@@ -12,11 +12,11 @@
         }
     },
     {
-        "logo_oportunidad_vida": {
+        "haceb_logo": {
             "multiples": false,
-            "image": "assets/images/logo-oportunidad-de-vida.webp",
-            "alt": "Oportunidad de vida IPS",
-            "title": "Logo de oportunidad de vida IPS"
+            "image": "assets/images/haceb-logo.webp",
+            "alt": "Haceb",
+            "title": "Logo de Haceb"
         }
     }
 ]

@@ -6,6 +6,7 @@ import { ConstantsUtil } from '@/utils/constants.util.js';
 const props = defineProps<{
     image: ImageConfig,
     loading: 'lazy' | 'eager',
+    className?: string,
 }>();
 
 const breakpoints = ConstantsUtil.BREAKPOINTS_CAROUSEL;
@@ -27,17 +28,16 @@ const fallbackSrc = computed(() =>
 </script>
 
 <template>
-    <picture class="responsive-picture">
+    <picture :class="`responsive-picture ${className ?? ''}`">
         <source v-for="source in sources" :key="source.media" :media="source.media" :srcset="source.srcset" />
         <img :src="fallbackSrc" :alt="image.alt ?? ''" :title="image.title ?? undefined" :loading="loading"
-            decoding="async" class="img-fluid"/>
+            decoding="async" class="img-fluid" />
     </picture>
 </template>
 
 <style scoped>
 .responsive-picture {
     display: block;
-    width: 500px;
 }
 
 .responsive-picture img {

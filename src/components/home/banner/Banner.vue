@@ -11,7 +11,7 @@ const { image } = useImage(() => props.imageKey);
 
 <template>
     <section v-if="image" class="banner" :aria-label="image.title">
-        <ResponsivePicture :image="image" loading="eager" />
+        <ResponsivePicture :image="image" loading="eager" class-name="banner-icon" />
     </section>
 </template>
 
@@ -21,5 +21,9 @@ const { image } = useImage(() => props.imageKey);
     overflow: hidden;
     display: flex;
     justify-content: center;
+}
+
+.banner-icon {
+    width: 500px;
 }
 </style>
