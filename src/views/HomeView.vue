@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import BannerSection from '@/components/home/banner-section/BannerSection.vue';
-import CustomerServiceChannelsSection from '@/components/home/customer-service-channels-section/CustomerServiceChannelsSection.vue';
-import GeneralInformationSection from '@/components/home/general-information-section/GeneralInformationSection.vue';
-import ProductCarouselSection from '@/components/home/products-carousel-section/ProductCarouselSection.vue';
-import SpecialistSection from '@/components/home/specialist-section/SpecialistSection.vue';
+import BannerSection from '@/components/home/BannerSection.vue';
+import CustomerServiceChannelsSection from '@/components/home/CustomerServiceChannelsSection.vue';
+import GeneralInformationSection from '@/components/home/GeneralInformationSection.vue';
+import ProductCarouselSection from '@/components/home/ProductCarouselSection.vue';
+import ReviewsCarouselSection from '@/components/home/ReviewsCarouselSection.vue';
+import SpecialistSection from '@/components/home/SpecialistSection.vue';
 </script>
 
 <template>
@@ -17,6 +18,8 @@ import SpecialistSection from '@/components/home/specialist-section/SpecialistSe
     <SpecialistSection />
 
     <BannerSection image-key="banner_servicios" />
+
+    <ReviewsCarouselSection />
 
     <CustomerServiceChannelsSection />
   </main>
