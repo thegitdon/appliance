@@ -1,0 +1,56 @@
+[
+    {
+        "icon": "fa-solid fa-inbox",
+        "title": "Paso 1: Presionar botón de WhatsApp",
+        "description": [
+            "descripción",
+            "descripción",
+            "descripción"
+        ]
+    },
+    {
+        "icon": "fa-solid fa-inbox",
+        "title": "Paso 2: Comentar inquietud",
+        "description": [
+            "descripción",
+            "descripción",
+            "descripción"
+        ]
+    },
+    {
+        "icon": "fa-solid fa-inbox",
+        "title": "Paso 3: Comentar inquietud",
+        "description": [
+            "descripción",
+            "descripción",
+            "descripción"
+        ]
+    },
+    {
+        "icon": "fa-solid fa-inbox",
+        "title": "Paso 4: Comentar inquietud",
+        "description": [
+            "descripción",
+            "descripción",
+            "descripción"
+        ]
+    },
+    {
+        "icon": "fa-solid fa-inbox",
+        "title": "Paso 5: Comentar inquietud",
+        "description": [
+            "descripción",
+            "descripción",
+            "descripción"
+        ]
+    },
+    {
+        "icon": "fa-solid fa-inbox",
+        "title": "Paso 6: Comentar inquietud",
+        "description": [
+            "descripción",
+            "descripción",
+            "descripción"
+        ]
+    }
+]

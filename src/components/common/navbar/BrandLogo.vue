@@ -1,18 +1,19 @@
 <script setup lang="ts">
 import { useImage } from '@/services/use-image.service';
 import ResponsivePicture from '../pictures/ResponsivePicture.vue';
+import type { ImageState } from '@/types/responsive-image.type.ts';
 
 defineProps<{
     to: string,
 }>();
 
-const { image } = useImage(() => 'haceb_logo');
+const hacebLogo: ImageState = useImage(() => 'haceb_logo');
 </script>
 
 <template>
     <a class="brand" :href="to" aria-label="Haceb Servicios — Ir al inicio">
-        <span class="brand__badge" v-if="image">
-            <ResponsivePicture :image="image" loading="eager" />
+        <span class="brand__badge" v-if="hacebLogo.image">
+            <ResponsivePicture :image="hacebLogo.image.value" loading="eager" />
         </span>
         <span class="brand__title">Servicios</span>
     </a>

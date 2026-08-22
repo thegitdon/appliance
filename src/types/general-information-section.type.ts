@@ -1,4 +1,4 @@
-export interface SectionContentType {
+export interface GeneralinformationSectionType {
     id: string;
     titulo: string;
     parrafos: string[];

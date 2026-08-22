@@ -1,17 +1,18 @@
 <script setup lang="ts">
 import ResponsivePicture from '@/components/common/pictures/ResponsivePicture.vue';
 import { useImage } from '@/services/use-image.service';
+import type { ImageState } from '@/types/responsive-image.type';
 
-const props = defineProps({
-    imageKey: { type: String, default: 'banner_servicios' },
-});
+const props = defineProps<{
+    imageKey: string
+}>();
 
-const { image } = useImage(() => props.imageKey);
+const image: ImageState = useImage(() => props.imageKey);
 </script>
 
 <template>
-    <section v-if="image" class="banner" :aria-label="image.title">
-        <ResponsivePicture :image="image" loading="eager" class-name="banner-icon" />
+    <section v-if="image.image" class="banner" :aria-label="image.image.value?.title">
+        <ResponsivePicture :image="image.image.value" loading="eager" class-name="banner-icon" />
     </section>
 </template>
 

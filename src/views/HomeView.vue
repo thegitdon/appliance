@@ -1,23 +1,26 @@
 <script setup lang="ts">
-import Banner from '@/components/home/banner/Banner.vue';
-import CustomerServiceChannels from '@/components/home/customer-service-channels/CustomerServiceChannels.vue';
-import GeneralInformationSection from '@/components/home/general-information/GeneralInformationSection.vue';
-import ProductCarousel from '@/components/home/products-carousel/ProductCarousel.vue';
-import SpecialistSection from '@/components/home/specialist/SpecialistSection.vue';
+import BannerSection from '@/components/home/BannerSection.vue';
+import CustomerServiceChannelsSection from '@/components/home/CustomerServiceChannelsSection.vue';
+import GeneralInformationSection from '@/components/home/GeneralInformationSection.vue';
+import ProductCarouselSection from '@/components/home/ProductCarouselSection.vue';
+import ReviewsCarouselSection from '@/components/home/ReviewsCarouselSection.vue';
+import SpecialistSection from '@/components/home/SpecialistSection.vue';
 </script>
 
 <template>
   <main>
-    <Banner />
+    <BannerSection image-key="banner_servicios" />
 
-    <ProductCarousel />
+    <ProductCarouselSection />
 
     <GeneralInformationSection />
 
     <SpecialistSection />
 
-    <Banner />
+    <BannerSection image-key="banner_servicios" />
 
-    <CustomerServiceChannels />
+    <ReviewsCarouselSection />
+
+    <CustomerServiceChannelsSection />
   </main>
 </template>

@@ -2,6 +2,7 @@
 import ResponsivePicture from '@/components/common/pictures/ResponsivePicture.vue';
 import { useImage } from '@/services/use-image.service';
 import type { CustomerServiceChannelType } from '@/types/customer-service-channel.type';
+import type { ImageState } from '@/types/responsive-image.type';
 
 const props = withDefaults(defineProps<{
     brandName?: string;
@@ -9,7 +10,7 @@ const props = withDefaults(defineProps<{
     brandName: 'Haceb'
 });
 
-const { image } = useImage(() => 'haceb_logo');
+const hacebLogo: ImageState = useImage(() => 'haceb_logo');
 
 const serviceData: CustomerServiceChannelType = {
     brandName: props.brandName,
@@ -114,8 +115,8 @@ const serviceData: CustomerServiceChannelType = {
                             <i class="bi bi-shield-check text-primary"></i>
                         </div>
                         <h3 class="service-title mb-3">Garantía directa de fábrica</h3>
-                        <div class="brand-logo mb-3" v-if="image">
-                            <ResponsivePicture :image="image" loading="eager" />
+                        <div class="brand-logo mb-3" v-if="hacebLogo.image">
+                            <ResponsivePicture :image="hacebLogo.image.value" loading="eager" />
                         </div>
                         <p class="text-muted">
                             Todas tus compras cuentan con el respaldo directo de Servicio {{ brandName }}

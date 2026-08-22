@@ -9,7 +9,7 @@ defineProps<{
     socialLinks: SocialButtonType[],
 }>();
 
-const redirectTo = 'https://www.facebook.com/';
+const redirectTo = '/';
 </script>
 
 <template>
