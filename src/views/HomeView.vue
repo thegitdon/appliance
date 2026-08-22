@@ -8,7 +8,7 @@ import SpecialistSection from '@/components/home/specialist-section/SpecialistSe
 
 <template>
   <main>
-    <BannerSection />
+    <BannerSection image-key="banner_servicios" />
 
     <ProductCarouselSection />
 
@@ -16,7 +16,7 @@ import SpecialistSection from '@/components/home/specialist-section/SpecialistSe
 
     <SpecialistSection />
 
-    <BannerSection />
+    <BannerSection image-key="banner_servicios" />
 
     <CustomerServiceChannelsSection />
   </main>

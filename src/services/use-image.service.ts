@@ -1,7 +1,7 @@
 import { ref, toValue, watch } from 'vue'
 import type { MaybeRefOrGetter, Ref } from 'vue'
 
-import type { ImageSize, ResponsiveImageType } from '@/types/responsive-image.type'
+import type { ImageSize, ImageState, ResponsiveImageType } from '@/types/responsive-image.type'
 import { consume } from './consumer.service';
 import { UrlConstantsUtil } from '@/utils/url-constants.util';
 
@@ -12,7 +12,7 @@ const IMAGE_SIZES = ['small', 'medium', 'large'] as const
  * - multiples: true  → requiere `images` con small, medium y large
  * - multiples: false → requiere `image`
  */
-export function isValidImageConfig(config: unknown): config is ResponsiveImageType {
+function isValidImageConfig(config: unknown): config is ResponsiveImageType {
     if (typeof config !== 'object' || config === null) return false
 
     const candidate = config as ResponsiveImageType;
@@ -37,13 +37,7 @@ async function findImageConfig(key: string): Promise<ResponsiveImageType | undef
     }
 }
 
-export function useImage(
-    key: MaybeRefOrGetter<string>,
-): {
-    image: Ref<ResponsiveImageType | null>
-    loading: Ref<boolean>
-    error: Ref<string | null>
-} {
+export function useImage(key: MaybeRefOrGetter<string>): ImageState {
     const image = ref<ResponsiveImageType | null>(null);
     const loading = ref(true);
     const error = ref<string | null>(null);
