@@ -5,15 +5,15 @@
         "children": [
             {
                 "label": "Lavadoras",
-                "to": "/servicios/instalacion/lavadoras"
+                "to": "/tipos-servicios#instalacion"
             },
             {
                 "label": "Neveras",
-                "to": "/servicios/instalacion/neveras"
+                "to": "/tipos-servicios#instalacion"
             },
             {
                 "label": "Estufas y cocinas",
-                "to": "/servicios/instalacion/estufas"
+                "to": "/tipos-servicios#instalacion"
             }
         ]
     },
@@ -23,15 +23,15 @@
         "children": [
             {
                 "label": "Plan preventivo",
-                "to": "/servicios/mantenimiento/preventivo"
+                "to": "/tipos-servicios#mantenimiento"
             },
             {
                 "label": "Lavadoras",
-                "to": "/servicios/mantenimiento/lavadoras"
+                "to": "/tipos-servicios#mantenimiento"
             },
             {
                 "label": "Neveras",
-                "to": "/servicios/mantenimiento/neveras"
+                "to": "/tipos-servicios#mantenimiento"
             }
         ]
     },
@@ -41,11 +41,11 @@
         "children": [
             {
                 "label": "Diagnóstico técnico",
-                "to": "/servicios/reparacion/diagnostico"
+                "to": "/tipos-servicios#reparacion"
             },
             {
                 "label": "Calentadores",
-                "to": "/servicios/reparacion/calentadores"
+                "to": "/tipos-servicios#reparacion"
             }
         ]
     }

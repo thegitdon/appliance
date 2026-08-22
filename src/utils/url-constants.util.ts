@@ -6,4 +6,5 @@ export class UrlConstantsUtil {
     public static readonly MENU_NAVBAR_URL = 'data/menu-navbar.json';
     public static readonly PRODUCTS_CAROUSEL_URL = 'data/products-carousel.json';
     public static readonly REVIEWS_CAROUSEL_URL = 'data/reviews-carousel.json';
+    public static readonly SERVICES_TYPE_URL = 'data/services-type.json';
 }
