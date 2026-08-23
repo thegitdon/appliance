@@ -18,18 +18,21 @@ onMounted(async () => {
 </script>
 
 <template>
-    <Step v-for="step in steps">
-        <template #icon>
-            <i :class="step.icon"></i>
-        </template>
-        <template #heading>{{ step.title }}</template>
+    <div class="align-items-center d-flex flex-column pb-5">
+        <h2 class="mb-5">Título bien bello</h2>
+        <Step v-for="step in steps">
+            <template #icon>
+                <i :class="step.icon"></i>
+            </template>
+            <template #heading>{{ step.title }}</template>
 
-        <div>
-            <p v-for="(parrafo, i) in step.description" :key="i">
-                {{ parrafo }}
-            </p>
-        </div>
-    </Step>
+            <div>
+                <p v-for="(parrafo, i) in step.description" :key="i">
+                    {{ parrafo }}
+                </p>
+            </div>
+        </Step>
+    </div>
 </template>
 
 <style scoped>
