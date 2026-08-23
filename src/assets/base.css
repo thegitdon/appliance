@@ -54,3 +54,8 @@
     max-width: 1600px;
   }
 }
+
+.custom-navbar-banner {
+  font-size: 16px;
+  height: 28.125em;
+}

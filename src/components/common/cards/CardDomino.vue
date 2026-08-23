@@ -8,7 +8,7 @@ const props = withDefaults(defineProps<{
 </script>
 
 <template>
-    <article :id="props.id" class="servicio" :class="{ 'servicio--invertido': invertido }">
+    <article :id="props.id" class="servicio py-5" :class="{ 'servicio--invertido': invertido }">
         <div class="servicio__icono">
             <slot name="image"></slot>
         </div>
@@ -25,8 +25,11 @@ const props = withDefaults(defineProps<{
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
-    padding: 3rem 0;
     border-bottom: 1px solid #e4e7ec;
+}
+
+.servicio:last-child {
+    border-bottom: none;
 }
 
 .servicio__icono {

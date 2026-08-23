@@ -35,6 +35,7 @@ defineProps<{
 .custom-card {
     border: 1px solid #1a1a1a;
     overflow: hidden;
+    height: 100%;
 }
 
 .custom-card__media {
