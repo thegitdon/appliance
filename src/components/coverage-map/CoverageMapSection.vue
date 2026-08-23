@@ -23,8 +23,8 @@ onMounted(async () => {
 
     for (const m of MapConstantsUtil.CITIES) {
         try {
-            const geojson = await fetchBoundary(m.query)
-            console.log(`[${m.name}]`, geojson)
+            const geojson = await fetchBoundary(m.geojsonFile)
+            console.log(`[${m.name}] cargado correctamente`)
 
             if (!geojson) {
                 console.warn(`Sin geometría para ${m.name}`)
@@ -52,8 +52,8 @@ onMounted(async () => {
                         mouseover: (e) => {
                             const l = e.target
                             l.setStyle({
-                                weight: 5,           // Borde más grueso
-                                fillOpacity: 0.6,    // Más opaco
+                                weight: 5,
+                                fillOpacity: 0.6,
                                 color: m.color,
                             })
                             l.bringToFront()
@@ -70,8 +70,6 @@ onMounted(async () => {
         } catch (err) {
             console.error(`Error con ${m.name}:`, err)
         }
-
-        await new Promise(r => setTimeout(r, 1100))
     }
 
     if (loadedCount > 0) {
@@ -88,22 +86,18 @@ onBeforeUnmount(() => {
     map = null
 })
 
-async function fetchBoundary(query: string): Promise<GeoJSON.FeatureCollection | null> {
-    const url = new URL('https://nominatim.openstreetmap.org/search')
-    url.searchParams.set('q', query)
-    url.searchParams.set('format', 'geojson')
-    url.searchParams.set('polygon_geojson', '1')
-    url.searchParams.set('limit', '1')
+async function fetchBoundary(fileName: string): Promise<GeoJSON.FeatureCollection | GeoJSON.Feature | null> {
+    const url = `${MapConstantsUtil.MAP_BOUNDARY_FOLDER_PATH}/${fileName}`
 
-    const res = await fetch(url.toString(), {
-        headers: { 'User-Agent': 'MiAppVue/1.0 (contacto@example.com)' },
-    })
+    const res = await fetch(url)
+    if (!res.ok) {
+        throw new Error(`HTTP ${res.status} al cargar ${url}`)
+    }
 
-    if (!res.ok) throw new Error(`HTTP ${res.status}`)
     const data = await res.json()
 
-    if (!data.features || data.features.length === 0) return null
-    return data as GeoJSON.FeatureCollection
+    if (!data) return null
+    return data as GeoJSON.FeatureCollection | GeoJSON.Feature
 }
 </script>
 

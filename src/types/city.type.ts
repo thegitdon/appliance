@@ -1,5 +1,5 @@
 export interface CityType {
-    name: string
-    query: string
-    color: string
+    name: string;
+    color: string;
+    geojsonFile: string;
 }
