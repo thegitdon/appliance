@@ -4,15 +4,16 @@ import { useImage } from '@/services/use-image.service';
 import type { ImageState } from '@/types/responsive-image.type';
 
 const props = defineProps<{
-    imageKey: string
+    imageKey: string,
+    className?: string,
 }>();
 
 const image: ImageState = useImage(() => props.imageKey);
 </script>
 
 <template>
-    <section v-if="image.image" class="banner" :aria-label="image.image.value?.title">
-        <ResponsivePicture :image="image.image.value" loading="eager" class-name="banner-icon" />
+    <section v-if="image.image" class="banner my-5" :aria-label="image.image.value?.title">
+        <ResponsivePicture :image="image.image.value" :class-name="className" loading="eager" />
     </section>
 </template>
 
@@ -22,9 +23,5 @@ const image: ImageState = useImage(() => props.imageKey);
     overflow: hidden;
     display: flex;
     justify-content: center;
-}
-
-.banner-icon {
-    width: 500px;
 }
 </style>

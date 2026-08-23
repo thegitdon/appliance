@@ -1,8 +1,11 @@
 <script setup lang="ts">
+import { useImage } from '@/services/use-image.service.ts';
 import FooterColumn from './FooterColumn.vue';
 import type { FooterLinkType } from '@/types/footer-link.type.ts';
+import type { ImageState } from '@/types/responsive-image.type.ts';
 import type { SocialButtonType } from '@/types/social-button.type.ts';
 import { ConstantsUtil } from '@/utils/constants.util.ts';
+import ResponsivePicture from '../pictures/ResponsivePicture.vue';
 
 const icons = ConstantsUtil.SOCIAL_ICONS;
 // ==================== DATA ====================
@@ -47,11 +50,12 @@ const serviceLinks: FooterLinkType[] = [
     { label: 'Solicitud de reversión de pago', href: '#' },
     { label: 'Crédito Haceb', href: '#' },
 ];
+
+const hacebLogo: ImageState = useImage(() => 'haceb_logo');
 </script>
 
 <template>
     <footer class="site-footer">
-        <!-- Social Bar -->
         <div class="social-bar">
             <div class="container">
                 <div class="social-icons d-flex justify-content-center gap-3 py-3">
@@ -64,24 +68,37 @@ const serviceLinks: FooterLinkType[] = [
             </div>
         </div>
 
-        <!-- Main Footer -->
         <div class="footer-main">
             <div class="container">
                 <div class="row g-4">
-                    <!-- Columna: Corporativo -->
-                    <div class="col-lg-4 col-md-12">
+                    <div class="col-lg-3 col-md-6 col-12">
                         <FooterColumn title="Corporativo" :links="corporateLinks" />
                     </div>
 
-                    <!-- Columna: Legales -->
-                    <div class="col-lg-4 col-md-12">
+                    <div class="col-lg-3 col-md-6 col-12">
                         <FooterColumn title="Legales" :links="legalLinks" />
                     </div>
 
-                    <!-- Columna: Servicios -->
-                    <div class="col-lg-4 col-md-12">
+                    <div class="col-lg-3 col-md-6 col-12">
                         <FooterColumn title="Servicios" :links="serviceLinks" />
                     </div>
+
+                    <div class="col-lg-3 col-md-6 col-12">
+                        <div class="align-items-center d-flex h-100 justify-content-center">
+                            <div class="brand-logo mb-3" v-if="hacebLogo.image">
+                                <ResponsivePicture :image="hacebLogo.image.value" loading="eager" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="social-bar">
+            <div class="container">
+                <div class="d-flex justify-content-center py-3">
+                    <a target="_blank" rel="noopener noreferrer" href="mailto:analistasistemas@oportunidaddevida.com"
+                        class="small mb-0 contact">© 2025 Elephas Innovare - Todos los derechos reservados</a>
                 </div>
             </div>
         </div>

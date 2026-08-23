@@ -9,26 +9,18 @@ const props = defineProps<{
 
 <template>
     <div class="card h-100 border-0 shadow-sm review-card">
-        <div class="card-body">
-            <!-- Estrellas -->
+        <div class="card-body d-flex flex-column h-100">
             <div class="mb-3">
                 <StarRating :rating="review.rating" />
             </div>
 
-            <!-- Comentario -->
             <p class="card-text text-muted mb-4">
                 {{ review.comment }}
             </p>
 
-            <!-- Autor -->
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center mt-auto">
                 <div class="author-icon me-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                        viewBox="0 0 16 16">
-                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
-                        <path fill-rule="evenodd"
-                            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z" />
-                    </svg>
+                    <i class="fa-solid fa-circle-user"></i>
                 </div>
                 <strong class="author-name">{{ review.authorName }}</strong>
             </div>
@@ -52,6 +44,7 @@ const props = defineProps<{
     color: #495057;
     display: flex;
     align-items: center;
+    font-size: 24px;
 }
 
 .author-name {

@@ -37,40 +37,38 @@ function obtenerImagen(sectionId: string): ImageState | undefined {
 </script>
 
 <template>
-    <section class="py-4">
-        <div class="container">
-            <CardDomino :id="section.id" v-for="(section, index) in sections" :key="section.id"
-                :invertido="index % 2 === 1">
-                <template #image>
-                    <div v-if="obtenerImagen(section.id)?.image.value">
-                        <ResponsivePicture :image="obtenerImagen(section.id)!.image.value" loading="eager"
-                            class-name="banner-icon" />
-                    </div>
-                </template>
+    <section class="my-5">
+        <CardDomino :id="section.id" v-for="(section, index) in sections" :key="section.id"
+            :invertido="index % 2 === 1">
+            <template #image>
+                <div v-if="obtenerImagen(section.id)?.image.value">
+                    <ResponsivePicture :image="obtenerImagen(section.id)!.image.value" loading="eager"
+                        class-name="banner-icon" />
+                </div>
+            </template>
 
-                <template #information>
-                    <h3 class="servicio__titulo">{{ section.titulo }}</h3>
+            <template #information>
+                <h3 class="servicio__titulo">{{ section.titulo }}</h3>
 
-                    <div>
-                        {{ section.descripcion }}
-                    </div>
+                <div>
+                    {{ section.descripcion }}
+                </div>
 
-                    <div>
-                        <span>Incluye:</span>
-                        <p v-for="(parrafo, i) in section.incluye" :key="i" class="servicio__parrafo">
-                            {{ parrafo }}
-                        </p>
-                    </div>
+                <div>
+                    <span>Incluye:</span>
+                    <p v-for="(parrafo, i) in section.incluye" :key="i" class="servicio__parrafo">
+                        {{ parrafo }}
+                    </p>
+                </div>
 
-                    <div>
-                        <span>No incluye:</span>
-                        <p v-for="(parrafo, i) in section.noIncluye" :key="i" class="servicio__parrafo">
-                            {{ parrafo }}
-                        </p>
-                    </div>
-                </template>
-            </CardDomino>
-        </div>
+                <div>
+                    <span>No incluye:</span>
+                    <p v-for="(parrafo, i) in section.noIncluye" :key="i" class="servicio__parrafo">
+                        {{ parrafo }}
+                    </p>
+                </div>
+            </template>
+        </CardDomino>
     </section>
 </template>
 
