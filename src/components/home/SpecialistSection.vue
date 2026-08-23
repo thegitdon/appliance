@@ -13,7 +13,7 @@ const headingId = useId();
 
 onMounted(async () => {
     try {
-        cards.value = await consume<CardContentType[]>(UrlConstantsUtil.UNIDADES_NEGOCIO_URL);
+        cards.value = await consume<CardContentType[]>(UrlConstantsUtil.BUSINESS_UNITIES_URL);
     } catch (e) {
         error.value = e instanceof Error ? e.message : 'Error inesperado';
     } finally {

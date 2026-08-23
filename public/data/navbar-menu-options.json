@@ -48,5 +48,10 @@
                 "to": "/tipos-servicios#reparacion"
             }
         ]
+    },
+    {
+        "id": "cobertura",
+        "label": "Cobertura",
+        "to": "/cobertura"
     }
 ]

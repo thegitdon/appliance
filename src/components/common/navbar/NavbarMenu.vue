@@ -9,16 +9,22 @@ defineProps<{
 <template>
   <nav class="navbar-menu" aria-label="Menú de servicios">
     <div class="navbar-menu__list px-3 py-2">
-      <div class="dropdown" v-for="item in items">
-        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      <template v-for="item in items" :key="item.id">
+        <div v-if="item.children?.length" class="dropdown">
+          <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{ item.label }}
+          </button>
+          <ul class="dropdown-menu">
+            <li v-for="child in item.children" :key="child.to">
+              <a class="dropdown-item" :href="child.to">{{ child.label }}</a>
+            </li>
+          </ul>
+        </div>
+
+        <a v-else class="btn" :href="item.to" role="button">
           {{ item.label }}
-        </button>
-        <ul class="dropdown-menu">
-          <li v-for="child in item.children">
-            <a class="dropdown-item" :href="child.to">{{ child.label }}</a>
-          </li>
-        </ul>
-      </div>
+        </a>
+      </template>
     </div>
   </nav>
 </template>

@@ -13,6 +13,11 @@ const router = createRouter({
       name: 'tipos-servicios',
       component: () => import('../views/ServiceTypeView.vue'),
     },
+    {
+      path: '/cobertura',
+      name: 'cobertura',
+      component: () => import('../views/CoverageMapView.vue'),
+    },
   ],
 })
 
