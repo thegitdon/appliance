@@ -20,17 +20,21 @@ onMounted(async () => {
 </script>
 
 <template>
-<h2 class="titulo-seccion">{{ title }}</h2>
-    <GenericCarousel id="reviews-carousel" :items="reviews">
-        <template #card="{ item }">
-            <CardReview :review="item" />
-        </template>
-    </GenericCarousel>
+    <div class="py-5">
+        <h2 class="mb-5 titulo-seccion">{{ title }}</h2>
+
+        <div class="py-3">
+            <GenericCarousel id="reviews-carousel" :items="reviews">
+                <template #card="{ item }">
+                    <CardReview :review="item" />
+                </template>
+            </GenericCarousel>
+        </div>
+    </div>
 </template>
 
 <style scoped>
 .titulo-seccion {
-    margin: 0 0 2.5rem;
     text-align: center;
     font-size: 2rem;
     font-weight: 600;

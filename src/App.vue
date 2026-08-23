@@ -5,10 +5,8 @@ import NavbarWithBanner from './components/common/navbar/NavbarWithBanner.vue';
 
 <template>
   <div class="custom-container">
-    <NavbarWithBanner image-key="banner_navbar" class-name="custom-navbar-banner"/>
-
-    <RouterView />
+    <NavbarWithBanner image-key="banner_navbar" class-name="custom-navbar-banner" />
   </div>
-
+  <RouterView />
   <Footer />
 </template>

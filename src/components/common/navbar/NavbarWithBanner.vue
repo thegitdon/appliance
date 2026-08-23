@@ -12,7 +12,6 @@ const props = defineProps<{
 const bannerImage: ImageState = useImage(() => props.imageKey);
 
 const backgroundImageUrl = computed(() => {
-    console.log(bannerImage);
     const url = bannerImage.image.value?.image;
     return url ? `url(${url})` : 'none';
 });

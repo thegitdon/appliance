@@ -9,16 +9,18 @@ import SpecialistSection from '@/components/home/SpecialistSection.vue';
 
 <template>
   <main>
-    <GeneralInformationSection />
+    <div class="custom-container">
+      <GeneralInformationSection />
 
-    <ProductCarouselSection />
+      <ProductCarouselSection />
 
-    <SpecialistSection />
+      <SpecialistSection />
 
-    <BannerSection image-key="banner_servicios" />
+      <BannerSection image-key="banner_servicios" class-name="banner-icon-dim" />
 
-    <ReviewsCarouselSection />
-
+      <ReviewsCarouselSection />
+    </div>
+    
     <CustomerServiceChannelsSection />
   </main>
 </template>

@@ -26,7 +26,7 @@ const serviceData: CustomerServiceChannelType = {
 </script>
 
 <template>
-    <section class="customer-service-section py-5 bg-light">
+    <section class="bg-light customer-service-section mt-5 py-5">
         <div class="container">
             <!-- Header -->
             <div class="text-center mb-5">
