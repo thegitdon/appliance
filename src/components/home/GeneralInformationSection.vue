@@ -10,7 +10,7 @@ const sections = ref<GeneralinformationSectionType[]>([]);
 
 onMounted(async () => {
     try {
-        sections.value = await consume<GeneralinformationSectionType[]>(UrlConstantsUtil.INFORMACION_GENERAL_URL);
+        sections.value = await consume<GeneralinformationSectionType[]>(UrlConstantsUtil.GENERAL_INFORMATION_URL);
     } catch (e) {
         console.log(e);
     }

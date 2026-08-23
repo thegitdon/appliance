@@ -20,7 +20,7 @@ onMounted(async () => {
 
 onMounted(async () => {
     try {
-        navbarMenuItems.value = await consume<NavbarMenuItemType[]>(UrlConstantsUtil.MENU_NAVBAR_URL);
+        navbarMenuItems.value = await consume<NavbarMenuItemType[]>(UrlConstantsUtil.NAVBAR_MENU_OPTIONS_URL);
     } catch (e) {
         console.log(e);
     }
