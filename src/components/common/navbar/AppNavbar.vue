@@ -28,7 +28,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <header class="app-navbar">
+    <header class="app-navbar rounded-3 mt-3">
         <NavbarTop :social-links="socialLinks" />
         <NavbarMenu :items="navbarMenuItems" />
     </header>
@@ -38,5 +38,6 @@ onMounted(async () => {
 .app-navbar {
     background-color: var(--color-surface);
     color: var(--color-text);
+    margin: 0 1rem;
 }
 </style>
