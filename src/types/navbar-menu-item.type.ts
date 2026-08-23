@@ -1,7 +1,8 @@
 export interface NavbarMenuItemType {
     id: string;
     label: string;
-    children: NavbarMenuChildItemType[];
+    to?: string;
+    children?: NavbarMenuChildItemType[];
 }
 
 interface NavbarMenuChildItemType {
