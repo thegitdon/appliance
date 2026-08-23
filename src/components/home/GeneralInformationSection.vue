@@ -5,7 +5,7 @@ import { onMounted, ref } from 'vue';
 import CardDomino from '../common/cards/CardDomino.vue';
 import type { GeneralinformationSectionType } from '@/types/general-information-section.type.ts';
 
-const title = "Nuestros servicios";
+const title = "Expertos en instalación, mantenimiento y reparación de electrodomésticos";
 const sections = ref<GeneralinformationSectionType[]>([]);
 
 onMounted(async () => {
