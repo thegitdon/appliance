@@ -1,5 +1,13 @@
 [
     {
+        "banner_navbar": {
+            "multiples": false,
+            "image": "assets/images/ac7bbfc16bc3b27271dd5d47f09ac8c8.webp",
+            "alt": "Técnico realizando mantenimiento de electrodomésticos Haceb",
+            "title": "Banner de servicios Haceb"
+        }
+    },
+    {
         "banner_servicios": {
             "multiples": true,
             "images": {

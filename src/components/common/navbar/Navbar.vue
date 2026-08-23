@@ -28,7 +28,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <header class="app-navbar rounded-3 mt-3">
+    <header class="app-navbar rounded-3">
         <NavbarTop :social-links="socialLinks" />
         <NavbarMenu :items="navbarMenuItems" />
     </header>

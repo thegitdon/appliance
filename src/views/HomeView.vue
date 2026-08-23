@@ -9,8 +9,6 @@ import SpecialistSection from '@/components/home/SpecialistSection.vue';
 
 <template>
   <main>
-    <BannerSection image-key="banner_servicios" />
-
     <GeneralInformationSection />
 
     <ProductCarouselSection />
