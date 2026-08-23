@@ -30,29 +30,27 @@ watch(() => slides.value.length, (length) => {
 </script>
 
 <template>
-    <div>
-        <div :id="props.id" class="custom-carousel carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
-            <div class="carousel-inner">
-                <div v-for="(group, i) in slides" :key="`${perView}-${i}`" class="carousel-item"
-                    :class="{ active: i === 0 }">
-                    <div class="row g-3">
-                        <div v-for="item in group" :key="item.id" :class="`col-${cols}`">
-                            <slot name="card" :item="item" />
-                        </div>
+    <div :id="props.id" class="custom-carousel carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+        <div class="carousel-inner">
+            <div v-for="(group, i) in slides" :key="`${perView}-${i}`" class="carousel-item"
+                :class="{ active: i === 0 }">
+                <div class="row g-3">
+                    <div v-for="item in group" :key="item.id" :class="`col-${cols}`">
+                        <slot name="card" :item="item" />
                     </div>
                 </div>
             </div>
-
-            <button class="carousel-control-prev" type="button" :data-bs-target="`#${props.id}`" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-
-            <button class="carousel-control-next" type="button" :data-bs-target="`#${props.id}`" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
         </div>
+
+        <button class="carousel-control-prev" type="button" :data-bs-target="`#${props.id}`" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" :data-bs-target="`#${props.id}`" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
     </div>
 </template>
 

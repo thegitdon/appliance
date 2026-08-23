@@ -20,13 +20,12 @@ onMounted(async () => {
 </script>
 
 <template>
-<div class="container">
-<!--<h2 class="titulo-seccion">{{ title }}</h2>-->
-    <GenericCarousel id="products-carousel" :items="products">
-        <template #card="{ item }">
-            <CardWithImage :card="item" />
-        </template>
-    </GenericCarousel>
+    <div class="my-5">
+        <GenericCarousel id="products-carousel" :items="products">
+            <template #card="{ item }">
+                <CardWithImage :card="item" />
+            </template>
+        </GenericCarousel>
     </div>
 </template>
 

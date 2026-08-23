@@ -18,29 +18,26 @@ onMounted(async () => {
 </script>
 
 <template>
-    <section class="py-4" aria-label="Información general">
-        <div class="container">
-            <h2 class="titulo-seccion">{{ title }}</h2>
+    <section class="mt-5 py-4" aria-label="Información general">
+        <h2 class="mb-3 titulo-seccion">{{ title }}</h2>
 
-            <CardDomino v-for="(section, index) in sections" :key="section.id" :invertido="index % 2 === 1">
-                <template #image>
-                    <i :class="section.icono.class" :style="section.icono.styles"></i>
-                </template>
+        <CardDomino v-for="(section, index) in sections" :key="section.id" :invertido="index % 2 === 1">
+            <template #image>
+                <i :class="section.icono.class" :style="section.icono.styles"></i>
+            </template>
 
-                <template #information>
-                    <h3 class="servicio__titulo">{{ section.titulo }}</h3>
-                    <p v-for="(parrafo, i) in section.parrafos" :key="i" class="servicio__parrafo">
-                        {{ parrafo }}
-                    </p>
-                </template>
-            </CardDomino>
-        </div>
+            <template #information>
+                <h3 class="servicio__titulo">{{ section.titulo }}</h3>
+                <p v-for="(parrafo, i) in section.parrafos" :key="i" class="servicio__parrafo">
+                    {{ parrafo }}
+                </p>
+            </template>
+        </CardDomino>
     </section>
 </template>
 
 <style scoped>
 .titulo-seccion {
-    margin: 0 0 2.5rem;
     text-align: center;
     font-size: 2rem;
     font-weight: 600;
