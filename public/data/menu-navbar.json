@@ -50,11 +50,6 @@
         ]
     },
     {
-        "id": "servicio-tecnico",
-        "label": "Servicio técnico",
-        "to": "/tipos-servicios"
-    },
-    {
         "id": "cobertura",
         "label": "Cobertura",
         "to": "/cobertura"
