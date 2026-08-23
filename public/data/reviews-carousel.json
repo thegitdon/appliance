@@ -2,37 +2,31 @@
     {
         "id": 1,
         "rating": 4,
-        "comment": "Es el mejor técnico",
-        "authorName": "Mauricio Valverde"
+        "comment": "Excelente servicio. Desde la instalación hasta la explicación del funcionamiento del electrodoméstico, todo fue muy profesional. Se nota el compromiso y la atención que tienen con cada cliente.",
+        "authorName": "Raúl Hernández"
     },
     {
         "id": 2,
         "rating": 5,
-        "comment": "Es el mejor técnico",
-        "authorName": "Ronald Girón"
+        "comment": "Muy satisfecha con el mantenimiento de mi electrodoméstico. Puntuales, cuidadosos y realizaron un trabajo de excelente calidad. Sin duda volveré a contar con sus servicios.",
+        "authorName": "Camila Correa"
     },
     {
         "id": 3,
         "rating": 5,
-        "comment": "Es el mejor técnico",
-        "authorName": "Ronald Girón"
+        "comment": "Mi electrodoméstico presentó falla y la reparación fue rápida y eficiente. Me explicaron qué problema tenía y qué solución necesitaba. Excelente atención y mucho profesionalismo.",
+        "authorName": "Sara Rivera"
     },
     {
         "id": 4,
-        "rating": 5,
-        "comment": "Es el mejor técnico",
-        "authorName": "Ronald Girón"
+        "rating": 4,
+        "comment": "Muy buena experiencia. Amable, responsable y trabajó con mucho cuidado. Me gustó especialmente la atención al detalle y el interés por dejar todo funcionando correctamente.",
+        "authorName": "Ricardo Vélez"
     },
     {
         "id": 5,
         "rating": 5,
-        "comment": "Es el mejor técnico",
-        "authorName": "Ronald Girón"
-    },
-    {
-        "id": 6,
-        "rating": 5,
-        "comment": "Es el mejor técnico",
-        "authorName": "Ronald Girón"
+        "comment": "Un servicio de confianza y calidad. Cumplieron con lo acordado, fueron transparentes y demostraron un verdadero compromiso con la satisfacción del cliente. Recomiendo.",
+        "authorName": "Santiago Calle"
     }
 ]

@@ -5,7 +5,7 @@ import type { CardContentType } from '@/types/card-content.type';
 import { consume } from '@/services/consumer.service';
 import { UrlConstantsUtil } from '@/utils/url-constants.util';
 
-const title = "Unidades de negocio";
+const title = "Experiencia ágil y efectiva";
 const cards = ref<CardContentType[]>([]);
 const cargando = ref(true);
 const error = ref<string | null>(null);

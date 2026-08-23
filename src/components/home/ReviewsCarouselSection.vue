@@ -7,6 +7,7 @@ import type { ReviewType } from '@/types/review.type.ts';
 import CardReview from '@/components/common/cards/CardReview.vue';
 import GenericCarousel from '@/components/common/carousels/GenericCarousel.vue';
 
+const title = "Respaldan nuestro servicio";
 const reviews = ref<ReviewType[]>([]);
 
 onMounted(async () => {
@@ -19,9 +20,19 @@ onMounted(async () => {
 </script>
 
 <template>
+<h2 class="titulo-seccion">{{ title }}</h2>
     <GenericCarousel id="reviews-carousel" :items="reviews">
         <template #card="{ item }">
             <CardReview :review="item" />
         </template>
     </GenericCarousel>
 </template>
+
+<style scoped>
+.titulo-seccion {
+    margin: 0 0 2.5rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+}
+</style>
