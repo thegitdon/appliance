@@ -1,24 +1,24 @@
 [
     {
         "id": "consulta-externa",
-        "titulo": "Consulta Externa",
+        "titulo": "Cuida lo que te importa",
         "parrafos": [
-            "En Consulta Externa ofrecemos atención ambulatoria especializada en psiquiatría, psiquiatría infantil, psicología, neuropsicología, terapia ocupacional y trabajo social. Nuestros servicios son integrales y están articulados entre sí, creando un espacio multidisciplinario donde cada profesional trabaja en conjunto para ofrecerte las mejores soluciones y un enfoque integral para tu bienestar."
+            "Prolonga la vida útil de tus equipos con nuestro servicio técnico oficial. Garantiza el máximo rendimiento de tu hogar con atención certificada y repuestos originales."
         ],
         "icono": {
-            "class": "fa-solid fa-reply",
+            "class": "fa-solid fa-handshake",
             "styles": "font-size: 40px;"
         }
     },
     {
         "id": "cuidado-basico",
-        "titulo": "Cuidado Básico Consumo Sustancias Psicoactivas",
+        "titulo": "Repuestos 100% originales",
         "parrafos": [
-            "El Cuidado Básico para el Consumo de Sustancias Psicoactivas se centra en la prevención y el manejo del consumo de sustancias psicoactivas, enfocándose en la identificación y el manejo de factores de riesgo y la promoción de estilos de vida saludables.",
-            "Este cuidado incluye la identificación y diagnóstico de factores de riesgo, la promoción de estilos de vida saludables y la participación en actividades comunitarias."
+            "Asegura el máximo desempeño de tus productos Haceb. Repuestos y accesorios originales que garantizan mayor durabilidad, eficiencia energética y la tranquilidad de tener el respaldo directo de la marca."
         ],
         "icono": {
-            "class": "fa-solid fa-reply"
+            "class": "fa-solid fa-house-circle-check",
+            "styles": "font-size: 40px;"
         }
     }
 ]
