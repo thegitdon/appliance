@@ -1,21 +1,8 @@
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue'
-import L from 'leaflet'
 import 'leaflet/dist/leaflet.css'
-
-interface Municipio {
-    nombre: string
-    query: string
-    color: string
-}
-
-const MUNICIPIOS: Municipio[] = [
-    { nombre: 'Cali', query: 'Cali, Valle del Cauca, Colombia', color: '#e74c3c' },
-    { nombre: 'Jamundí', query: 'Jamundí, Valle del Cauca, Colombia', color: '#3498db' },
-    { nombre: 'Palmira', query: 'Palmira, Valle del Cauca, Colombia', color: '#2ecc71' },
-    { nombre: 'Yumbo', query: 'Yumbo, Valle del Cauca, Colombia', color: '#f39c12' },
-    { nombre: 'Buenaventura', query: 'Buenaventura, Valle del Cauca, Colombia', color: '#9b59b6' },
-]
+import L from 'leaflet'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { MapConstantsUtil } from '@/utils/map-constants.util'
 
 const mapContainer = ref<HTMLDivElement | null>(null)
 const loading = ref(true)
@@ -34,13 +21,13 @@ onMounted(async () => {
     const bounds = L.latLngBounds([])
     let loadedCount = 0
 
-    for (const m of MUNICIPIOS) {
+    for (const m of MapConstantsUtil.CITIES) {
         try {
             const geojson = await fetchBoundary(m.query)
-            console.log(`[${m.nombre}]`, geojson)
+            console.log(`[${m.name}]`, geojson)
 
             if (!geojson) {
-                console.warn(`Sin geometría para ${m.nombre}`)
+                console.warn(`Sin geometría para ${m.name}`)
                 continue
             }
 
@@ -53,8 +40,8 @@ onMounted(async () => {
                     fillOpacity: 0.35,
                 },
                 onEachFeature: (_feature, layer) => {
-                    layer.bindPopup(`<strong>${m.nombre}</strong><br/>Zona de atención`)
-                    layer.bindTooltip(m.nombre, {
+                    layer.bindPopup(`<strong>${m.name}</strong><br/>Zona de atención`)
+                    layer.bindTooltip(m.name, {
                         sticky: true,
                         direction: 'top',
                         offset: [0, -10],
@@ -81,7 +68,7 @@ onMounted(async () => {
             bounds.extend(geoJsonLayer.getBounds())
             loadedCount++
         } catch (err) {
-            console.error(`Error con ${m.nombre}:`, err)
+            console.error(`Error con ${m.name}:`, err)
         }
 
         await new Promise(r => setTimeout(r, 1100))
