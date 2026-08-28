@@ -19,36 +19,20 @@ const socialLinks: SocialButtonType[] = [
 ];
 
 const corporateLinks: FooterLinkType[] = [
-    { label: 'Empresa', href: '#' },
-    { label: 'Proveedores y clientes', href: '#' },
-    { label: 'Puntos de venta', href: '#' },
-    { label: 'Servicio Haceb', href: '#' },
-    { label: 'Blog Haceb', href: '#' },
-    { label: 'Registro para eventos', href: '#' },
-    { label: 'Trabaja con nosotros', href: '#' },
+    { label: 'Servicio Técnico', href: '#' },
+    { label: 'Blog', href: '#' },
 ];
 
 const legalLinks: FooterLinkType[] = [
-    { label: 'Términos y condiciones de compra', href: '#' },
     { label: 'Condiciones de uso del sitio', href: '#' },
     { label: 'Política de protección de datos personales', href: '#' },
-    { label: 'Cambios y devoluciones', href: '#' },
     { label: 'Cobertura para entregas', href: '#' },
-    { label: 'Guía para comprar aquí', href: '#' },
-    { label: 'Capacidad Operativa y Tecnológica', href: '#' },
-    { label: 'Términos y condiciones Hogar Haceb', href: '#' },
     { label: 'Términos y condiciones de servicios', href: '#' },
-    { label: 'Términos y condiciones de Crédito Haceb', href: '#' },
-    { label: 'Términos y condiciones Aliados Haceb', href: '#' },
-    { label: 'Autorización tratamiento de datos financieros Crédito Haceb', href: '#' },
 ];
 
 const serviceLinks: FooterLinkType[] = [
     { label: 'Agendar servicio técnico', href: '#' },
     { label: 'Preguntas frecuentes', href: '#' },
-    { label: 'Pago de facturas de Servicio', href: '#' },
-    { label: 'Solicitud de reversión de pago', href: '#' },
-    { label: 'Crédito Haceb', href: '#' },
 ];
 
 const hacebLogo: ImageState = useImage(() => 'haceb_logo');

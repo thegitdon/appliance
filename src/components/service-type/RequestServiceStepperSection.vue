@@ -19,7 +19,7 @@ onMounted(async () => {
 
 <template>
     <div class="align-items-center d-flex flex-column pb-5">
-        <h2 class="mb-5">Título bien bello</h2>
+        <h2 class="mb-5">Conoce los pasos para pedir tu servicio técnico</h2>
         <Step v-for="step in steps">
             <template #icon>
                 <i :class="step.icon"></i>

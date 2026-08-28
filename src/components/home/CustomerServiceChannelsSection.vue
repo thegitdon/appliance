@@ -12,13 +12,11 @@ const props = withDefaults(defineProps<{
 
 const serviceData: CustomerServiceChannelType = {
     brandName: props.brandName,
-    emergencyNumber: '#466',
+    emergencyNumber: '',
     technicalPhones: [
-        { city: 'Medellín', number: '6042552100', formattedNumber: '(604)2552100' },
-        { city: 'Bogotá', number: '6014897979', formattedNumber: '(601)4897979' },
-        { city: 'Barranquilla', number: '6053110000', formattedNumber: '(605)3110000' }
+        { city: '', number: '6053110000', formattedNumber: '(605) 311 0000' }
     ],
-    whatsappNumber: '+57 3164539797',
+    whatsappNumber: '+57 316 453 9797',
     whatsappCountryCode: '57'
 };
 </script>
@@ -40,10 +38,10 @@ const serviceData: CustomerServiceChannelType = {
                 <div class="col-lg-4 col-md-6">
                     <div class="text-center h-100 p-4">
                         <div class="icon-wrapper mb-3">
-                            <i class="fa-solid fa-circle-user"></i>
+                            <i class="fa-solid fa-phone"></i>
                         </div>
                         <h3 class="service-title mb-3">
-                            Servicio técnico {{ brandName }}
+                            Servicio técnico
                         </h3>
                         <div class="phone-number mb-3">
                             <span class="phone-number__label px-2 py-1">¡Llama ahora!</span>
@@ -52,7 +50,7 @@ const serviceData: CustomerServiceChannelType = {
                         </div>
                         <ul class="phone-list list-unstyled">
                             <li v-for="phone in serviceData.technicalPhones" :key="phone.city" class="mb-2">
-                                <strong>{{ phone.city }}: </strong>
+                                <strong>{{ phone.city }} </strong>
                                 <a :href="`tel:${phone.number}`" class="text-decoration-none text-dark">
                                     {{ phone.formattedNumber }}
                                 </a>
@@ -88,8 +86,8 @@ const serviceData: CustomerServiceChannelType = {
                                         <div class="accordion-body">
                                             <div class="schedule-info mt-3 p-3 bg-white rounded">
                                                 <p class="mb-2">
-                                                    <strong>Lunes - viernes:</strong> 8 am a 6 pm<br>
-                                                    <strong>Sábados:</strong> 8 am a 4 pm<br>
+                                                    <strong>Lunes - Viernes:</strong> 7 am a 5 pm<br>
+                                                    <strong>Sábados:</strong> 7 am a 5 pm<br>
                                                     <strong>Jornada continua</strong>
                                                 </p>
                                                 <small class="text-muted d-block">
@@ -110,11 +108,11 @@ const serviceData: CustomerServiceChannelType = {
                 <div class="col-lg-4 col-md-6">
                     <div class="text-center h-100 p-4">
                         <div class="icon-wrapper mb-3">
-                            <i class="fa-solid fa-circle-user"></i>
+                            <i class="fa-solid fa-wifi"></i>
                         </div>
-                        <h3 class="service-title mb-3">Garantía directa de fábrica</h3>
+                        <h3 class="service-title mb-3">Disponibilidad 24/7</h3>
                         <p class="text-muted">
-                            Todas tus compras cuentan con el respaldo directo de Servicio {{ brandName }}
+                            Nuestra web está disponible las 24 horas, los 7 días de la semana para que programes tus citas de forma inmediata.
                         </p>
                     </div>
                 </div>
