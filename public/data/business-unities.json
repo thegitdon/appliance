@@ -9,7 +9,7 @@
     {
         "id": "sustancias-psicoactivas",
         "titulo": "Diagnóstico transparente:",
-        "descripcion": "Tras evaluar el daño, te informaremos el trabajo a realizar y el presupuesto final. Si decides no reparar, solo cancelas el valor de la visita.",
+        "descripcion": "Tras evaluar el daño, te informaremos el trabajo a realizar y el presupuesto final.",
         "icono": "fa-solid fa-list-check",
         "href": "#"
     },
@@ -22,15 +22,15 @@
     },
     {
         "id": "salud-mental",
-        "titulo": "Cobertura nacional:",
-        "descripcion": "Llegamos a más de 1.010 municipios en toda Colombia.",
+        "titulo": "Cobertura regional:",
+        "descripcion": "Valle del Cauca, conectando municipios y comunidades.",
         "icono": "fa-solid fa-map-location-dot",
         "href": "#"
     },
     {
         "id": "telemedicina",
         "titulo": "Estado de tu equipo:",
-        "descripcion": "Atendemos tus solicitudes estén o no dentro del periodo de garantía, con el respaldo oficial de la marca.",
+        "descripcion": "Atendemos tus solicitudes estén o no dentro del periodo de garantía.",
         "icono": "fa-solid fa-shield-heart",
         "href": "#"
     },

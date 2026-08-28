@@ -2,17 +2,15 @@
     {
         "id": "instalacion",
         "titulo": "Instalación",
-        "descripcion": "¡Asegura el rendimiento óptimo de tu lavadora con nuestro servicio especializado! Ofrecemos mantenimiento completo para detectar y reparar cualquier problema, realizando los ajustes necesarios que prolonguen la vida útil de tu equipo de lavado.",
+        "descripcion": "¡Instala tu nuevo electrodoméstico con facilidad! Nos encargamos de la instalación profesional para garantizar un óptimo rendimiento. La mano de obra tiene un costo, que varía según los accesorios que requiere el producto. Contáctate con nosotros para obtener más detalles y asegurar un servicio eficiente y adaptado a tus necesidades.",
         "imagen": "lavadora",
         "valor": "Sujeto a cotización",
         "incluye": [
-            "-Diagnóstico y revisión exhaustiva de la lavadora.",
-            "-Reparación de fallos y ajustes técnicos.",
-            "-Limpieza y mantenimiento preventivo para evitar futuros problemas."
-        ],
+            "-Desmonte del producto anterior.",
+            "-Instalación del nuevo producto."        ],
         "noIncluye": [
-            "-Repuestos necesarios para la reparación, los cuales se cotizarán por separado.",
-            "-Modificaciones estructurales o reparaciones no relacionadas con el funcionamiento estándar"
+            "-Repuestos y materiales adicionales que puedan ser necesarios.",
+            "-Modificación estructural fuera del alcance estándar de la instalación."
         ]
     },
     {
@@ -22,29 +20,29 @@
         "imagen": "lavadora",
         "valor": "Sujeto a cotización",
         "incluye": [
-            "-Diagnóstico y revisión exhaustiva de la lavadora.",
+            "-Diagnóstico y revisión exhaustiva.",
             "-Reparación de fallos y ajustes técnicos.",
             "-Limpieza y mantenimiento preventivo para evitar futuros problemas."
         ],
         "noIncluye": [
             "-Repuestos necesarios para la reparación, los cuales se cotizarán por separado.",
-            "-Modificaciones estructurales o reparaciones no relacionadas con el funcionamiento estándar"
+            "-Modificaciones estructurales o reparaciones no relacionadas con el funcionamiento estándar."
         ]
     },
     {
         "id": "reparacion",
         "titulo": "Reparación",
-        "descripcion": "¡Asegura el rendimiento óptimo de tu lavadora con nuestro servicio especializado! Ofrecemos mantenimiento completo para detectar y reparar cualquier problema, realizando los ajustes necesarios que prolonguen la vida útil de tu equipo de lavado.",
+        "descripcion": "¡Deja que nuestro experto se encargue de la reparación de tu electrodoméstico! Ofrecemos un servicio especializado para asegurar que tu equipo vuelva a funcionar como nuevo y mantenga su rendimiento óptimo.",
         "imagen": "lavadora",
         "valor": "Sujeto a cotización",
         "incluye": [
-            "-Diagnóstico y revisión exhaustiva de la lavadora.",
+            "-Diagnóstico y revisión exhaustiva.",
             "-Reparación de fallos y ajustes técnicos.",
             "-Limpieza y mantenimiento preventivo para evitar futuros problemas."
         ],
         "noIncluye": [
             "-Repuestos necesarios para la reparación, los cuales se cotizarán por separado.",
-            "-Modificaciones estructurales o reparaciones no relacionadas con el funcionamiento estándar"
+            "-Modificaciones estructurales o reparaciones no relacionadas con el funcionamiento estándar."
         ]
     }
 ]
